@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+
+ID: {{ article.id }} </br></br>
+Title: {{ article.title }} </br></br>
+Author: {{ article.author.first_name }} {{ article.author.last_name }}</br></br>
+Slug: {{ article.slug }} </br></br>
+Content: {{ article.content }} </br></br>
+Published at: {{ article.publication_datetime }} </br></br>
+
+<a href="{% url 'article_list' %}"> Return to Article List </a>
+</body>
+</html>

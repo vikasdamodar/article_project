@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+
+<h3>Articles</h3>
+<ul>
+    {% for article in articles %}
+    <li> {{ article.id }} : {{ article.title }}
+        <a href = "{% url 'article_detail' id=article.id slug=article.slug %}" > View </a ></li><br>
+    {% endfor %}
+</ul>
+{% if previous %}
+    <a href={{ previous }}> previous page </a > </br>
+{% endif %}
+{% if next %}
+    <a href={{ next }}> next page </a >
+{% endif %}
+</body>
+</html>
